@@ -167,3 +167,12 @@ jobs:
           S3_REGION: ${{ secrets.S3_REGION }}
           GITHUB_ACTIONS: true
         run: python -m trendradar
+        
+      # === 新增：保存数据到 GitHub Actions Artifacts ===
+      - name: Upload database and reports
+        if: always()  # 确保即使爬虫报错，也能拿到日志和已生成的文件
+        uses: actions/upload-artifact@v4
+        with:
+          name: trendradar-output-${{ github.run_id }} # 加上运行ID防止重名
+          path: output/
+          retention-days: 7 # 这里的产物保留7天，省空间
