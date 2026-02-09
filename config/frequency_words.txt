@@ -150,109 +150,42 @@
 [WORD_GROUPS]
 
 # ═══════════════════════════════════════════════════════════════
-#                         企业与品牌
+#                          保险与金融舆情
 # ═══════════════════════════════════════════════════════════════
 
-/胖东来|于东来/ => 胖东来
-
-/深度求索|幻方量化|梁文锋|\bDeepSeek\b/ => DeepSeek
-
-/华为|任正非|余承东|鸿蒙|海思|昇腾|鲲鹏|\bHUAWEI\b|\bHarmonyOS\b|\bHiSilicon\b/ => 华为
-
-/比亚迪|王传福|方程豹|腾势|仰望|弗迪|刀片电池|云辇|\bBYD\b|\bDenza\b|\bYangwang\b/ => 比亚迪
-
-/大疆|汪滔|灵眸|如影|\bDJI\b|\bRoboMaster\b|\bMavic\b|\bZenmuse\b/ => 大疆
-
-/宇树|王兴兴|\bUnitree\b/ => 宇树机器人
-
-/智元|灵犀|稚晖君|彭志辉|AgiBot/ => 智元机器人
-/众擎|EngineAI|赵同阳/ => 众擎机器人
-
-/黑神话|冯骥/ => 黑神话悟空
-
-/影之刃零|梁其伟/ => 影之刃零
-
-/三体|流浪地球|刘慈欣|郭帆/ => 三体/流浪地球
-
-申奥
-
-/京东|刘强东|\bJD\b|\bJingdong\b/ => 京东
-
-/字节|张一鸣|梁汝波|抖音|\bByteDance\b|\bTikTok\b|\bDouyin\b|\bLark\b|\bCapCut\b/ => 字节跳动
-
-/腾讯|鹅厂|马化腾|微信|QQ|天美|阅文集团|微众银行|\bTencent\b|\bPony Ma\b|\bWeChat\b|\bLightSpeed\b|\bWeBank\b/ => 腾讯
-
-/qwen|minimax|glm/ => 国产开源模型
-
-/特斯拉|马斯克|\bTesla\b|\bElon Musk\b|\bCybertruck\b|\bModel 3\b|\bModel Y\b|\bModel S\b|\bModel X\b|\bFSD\b/ => 特斯拉
-
-/英伟达|黄仁勋|\bNVIDIA\b|\bGeForce\b|\bRTX\b|\bCUDA\b|\bJensen Huang\b/ => 英伟达
-/苏姿丰|锐龙|霄龙|\bAMD\b|\bRyzen\b|\bEPYC\b|\bRadeon\b|\bLisa Su\b/ => AMD
-
-/微软|\bMicrosoft\b|\bWindows\b|\bAzure\b|\bSatya Nadella\b|\bCopilot\b/ => 微软
-/谷歌|皮查伊|安卓|油管|\bGoogle\b|\bAlphabet\b|\bAndroid\b|\bChrome\b|\bYouTube\b|\bGemini\b|\bDeepMind\b|\bWaymo\b/ => 谷歌
-/库克|\biPhone\b|\biPad\b|\bMacBook\b|\biOS\b|\bVision Pro\b|\bAirPods\b|\bApple\b|\bTim Cook\b/ => 苹果
-
-/\bOpenAI\b|\bChatGPT\b|\bSora\b|\bDALL-E\b|\bSam Altman\b|\bGreg Brockman\b/ => OpenAI
-/\bAnthropic\b|\bClaude\b|\bDario Amodei\b/ => Claude
-
+[保险市场与舆情]
+/保险|寿险|财险|保单|理赔|险资|增额终身寿/
+/中国人寿|中国平安|太平洋保险|友邦保险|人保/ => 头部险企动态
+/保费|分红险|万能险|车险/
+/金融科技|Fintech|数字金融/ => 保险科技相关
 
 # ═══════════════════════════════════════════════════════════════
-#                         国家与地区
+#                         AI 发展与技术突破 (强化核心)
 # ═══════════════════════════════════════════════════════════════
 
-[中国]
-国产
-中国
-
-[东亚]
-日本
-朝鲜
-韩国
-
-[北美]
-美国
-加拿大
-
-[西欧]
-法国
-英国
-
-/俄罗斯|俄国/ => 俄罗斯
-
-印度
-
-
-# ═══════════════════════════════════════════════════════════════
-#                         科技领域
-# ═══════════════════════════════════════════════════════════════
-
-[AI 相关]
-/(?<![a-zA-Z])ai(?![a-zA-Z])/
+[AI 全球动态]
+/(?<![a-zA-Z])ai(?![a-zA-Z])/i
 人工智能
+/大模型|LLM|Transformer|多模态|预训练|Scaling Law/ => AI 理论与技术突破
+/AIGC|生成式AI|文生图|文生视频|Sora/
+/Agent|智能体|具身智能/ => AI 应用演进
 
-[芯片]
-芯片
-光刻机
-半导体
+[AI 巨头与开源]
+/DeepSeek|OpenAI|ChatGPT|Claude|Anthropic/i
+/Microsoft|谷歌|Google|Gemini|Meta|Llama/i
+/字节跳动|豆包|Kimi|智谱|Qwen|通义千问/i
 
-/水电|雅鲁藏布江/ => 水电
-/光伏|太阳能/ => 光伏
-核能
-能源
+[AI 算力基座]
+/英伟达|NVIDIA|黄仁勋|H100|B200/i => 算力霸主
+/芯片|光刻机|半导体|GPU|显卡/
+/台积电|TSMC|ASML|AMD/i
 
-/自动驾驶|无人驾驶|智驾/ => 自动驾驶
+# ═══════════════════════════════════════════════════════════════
+#                         关联企业与品牌
+# ═══════════════════════════════════════════════════════════════
 
-机器人
-/机械狗|四足/ => 机器狗
-具身智能
-
-/月球|登月|火星|宇宙|飞船|航天|空间站|卫星/ => 航天
-
-# 前沿科技
-量子
-脑机
-基因
-
-# 产业政策
-生产力
+[重点企业舆情]
+/华为|鸿蒙|HarmonyOS|任正非/i
+/特斯拉|马斯克|Tesla|FSD/i => 自动驾驶与AI硬件
+/腾讯|马化腾|阿里|马云|百度|李彦宏/i => 互联网大厂AI动态
+/苹果|Apple|Apple Intelligence/i
